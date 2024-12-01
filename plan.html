@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="title">plan</p>
+    <form class="log-box">
+      <div class="steps">
+        <a href="info.html">
+          <div class="step-1">
+            <span>1</span>
+            <div class="step-name">
+              <p>STEP 1</p>
+              <p>YOUR INFO</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="plan.html">
+          <div class="step-2">
+            <span id="second">2</span>
+            <div class="step-name">
+              <p>STEP 2</p>
+              <p>SELECT PLAN</p>
+            </div>
+          </div>
+        </a>
+
+        <div class="step-3">
+          <span id="third">3</span>
+          <div class="step-name">
+            <p>STEP 3</p>
+            <p>ADD-ONS</p>
+          </div>
+        </div>
+
+        <div class="step-4">
+          <span id="fourth">4</span>
+          <div class="step-name">
+            <p>STEP 4</p>
+            <p>SUMMARY</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fill-box" id="planPage">
+        <div class="top">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+        </div>
+
+        <div class="fill">
+          <div class="r-btn">
+            <label class="planBoxes" id="planBox1">
+              <img src="images/icon-arcade.svg" alt="error" />
+              <div class="plan-price">
+                <p>ARCADE</p>
+                <p class="arc-price">$9/mo</p>
+                <p id="freeAd1">2 month free</p>
+              </div>
+            </label>
+
+            <label class="planBoxes" id="planBox2">
+              <img src="images/icon-advanced.svg" alt="error" />
+              <div class="plan-price">
+                <p>ADVANCED</p>
+                <p class="adv-price">$12/mo</p>
+                <p id="freeAd2">2 month free</p>
+              </div>
+            </label>
+
+            <label class="planBoxes" id="planBox3">
+              <img src="images/icon-pro.svg" alt="error" />
+              <div class="plan-price">
+                <p>PRO</p>
+                <p class="pro-price">$15/mo</p>
+                <p id="freeAd3">2 month free</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="slid-button">
+          <p>Monthly</p>
+          <div class="slid-btn">
+            <div class="circle"></div>
+          </div>
+          <p>Yearly</p>
+        </div>
+
+        <div class="btns">
+          <a href="info.html" class="back">Go Back</a>
+          <button class="next" id="nextbtn">
+            <p id="adonpg">Next Step</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="fill-box" id="addonPage">
+        <div class="top">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+        </div>
+
+        <div class="fill">
+          <div class="check-btn">
+            <div class="check" id="check-1">
+              <div class="check-info-box">
+                <div class="check-box" id="checkBox-1">
+                  <img src="images/icon-checkmark.svg" alt="error" />
+                </div>
+                <div class="info">
+                  <p>Online service</p>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+
+              <p id="service-price">+$1/mo</p>
+            </div>
+
+            <div class="check" id="check-2">
+              <div class="check-info-box">
+                <div class="check-box" id="checkBox-2">
+                  <img src="images/icon-checkmark.svg" alt="error" />
+                </div>
+                <div class="info">
+                  <p>Larger storage</p>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+              </div>
+
+              <p id="store-price">+$2/mo</p>
+            </div>
+
+            <div class="check" id="check-3">
+              <div class="check-info-box">
+                <div class="check-box" id="checkBox-3">
+                  <img src="images/icon-checkmark.svg" alt="error" />
+                </div>
+                <div class="info">
+                  <p>Customizable Profile</p>
+                  <p>Custom theme on your profile</p>
+                </div>
+              </div>
+
+              <p id="custom-price">+$2/mo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btns" id="BTNS">
+          <a class="back" id="backToPlan">Go Back</a>
+          <button class="next" id="finisPageBtn">Next Step</button>
+        </div>
+      </div>
+
+      <div class="fill-box" id="finisingPage">
+        <div class="top">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+        </div>
+
+        <div class="fill">
+          <div class="bill">
+            <div class="selected-plan aline">
+              <div class="plan-des">
+                <div class="planName">
+                  <h3 id="planType">Arcade</h3>
+                  <h3 id="planTime">(Monthly)</h3>
+                </div>
+
+                <a href="plan.html">change</a>
+              </div>
+              <h3 id="planCost">$9/mo</h3>
+            </div>
+            <hr />
+            <div class="add-on1 aline">
+              <p>Online service</p>
+              <p class="onPrice1">+$1/mo</p>
+            </div>
+            <div class="add-on2 aline">
+              <p>Larger storage</p>
+              <p class="onPrice2">+$2/mo</p>
+            </div>
+            <div class="add-on3 aline">
+              <p>Customizable Profile</p>
+              <p class="onPrice3">+$2/mo</p>
+            </div>
+          </div>
+          <div class="total-price aline">
+            <div class="planName">
+              <p>Total</p>
+              <p id="costTime">(per month)</p>
+            </div>
+
+            <p id="totalCost">+$12/mo</p>
+          </div>
+        </div>
+
+        <div class="btns">
+          <a id="backToAddon" class="back">Go Back</a>
+          <a href="thank.html" class="next" id="confirm">Confirm</a>
+        </div>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

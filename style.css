@@ -1,0 +1,578 @@
+@font-face {
+  font-family: myFont;
+  src: url(fonts/Ubuntu-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myFont, serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(217, 100%, 97%);
+}
+
+#title {
+  display: none;
+}
+
+.log-box {
+  width: 70%;
+  max-width: 60rem;
+  height: 70%;
+  max-height: 36rem;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.steps {
+  background: url(images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 30%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.steps a {
+  text-decoration: none;
+}
+
+.fill-box {
+  background-color: white;
+  width: 63%;
+  border-radius: 9px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  position: relative;
+}
+
+.step-1,
+.step-2,
+.step-3,
+.step-4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.steps span {
+  border: 1px solid white;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.step-name :first-child {
+  font-size: 12px;
+  font-weight: 50;
+  margin-bottom: 5px;
+  opacity: 0.5;
+}
+
+.currentPage {
+  color: black;
+  background-color: rgba(206, 252, 236, 0.945);
+  border: none;
+}
+
+.top h1 {
+  color: hsl(213, 96%, 18%);
+  font-size: 2.2rem;
+}
+
+.top p {
+  color: hsl(231, 11%, 63%);
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.fill label {
+  font-size: 15px;
+  color: hsl(213, 96%, 18%);
+}
+
+.masg {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#msg1,
+#msg2,
+#msg3 {
+  color: hsl(354, 84%, 57%);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.fill input {
+  width: 90%;
+  height: 2.5rem;
+  max-height: 3.5rem;
+  border-radius: 8px;
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 1rem;
+  font-size: 1rem;
+  outline: transparent;
+}
+
+#name,
+#email,
+#phone {
+  background-color: white;
+}
+
+.fill input:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.next {
+  width: 22%;
+  padding: 1rem 0;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  right: 19%;
+  text-decoration: none;
+  text-align: center;
+}
+
+#nextbtn:hover {
+  background-color: navy;
+  cursor: pointer;
+}
+
+.one,
+.two,
+.three {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 5%;
+}
+
+/* plan-price page */
+
+.r-btn {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.r-btn input {
+  display: none;
+}
+
+.r-btn label {
+  width: 9.5vw;
+  max-width: 8.5rem;
+  height: 20vh;
+  max-height: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  border: 1px solid hsl(231, 11%, 63%);
+  background-color: white;
+}
+
+.planBoxes,
+#planBox1,
+#planBox2,
+#planBox3 {
+  background-color: white;
+  cursor: pointer;
+}
+
+.r-btn label:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.r-btn label div {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.r-btn label div :last-child {
+  opacity: 0.5;
+  color: hsl(231, 11%, 63%);
+}
+
+.back {
+  color: hsl(231, 11%, 63%);
+  background-color: transparent;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  outline: transparent;
+  border: none;
+  width: 22%;
+  padding: 1rem 0;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.slid-button {
+  background-color: hsla(228, 100%, 84%, 0.178);
+  width: 75%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 25%;
+  gap: 8%;
+  color: hsl(231, 11%, 63%);
+  display: none;
+}
+
+.slid-btn {
+  width: 2.5rem;
+  height: 1.2rem;
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.circle {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+.move {
+  margin-left: 1.2rem;
+}
+
+#addonPage {
+  display: none;
+}
+
+.check {
+  width: 85%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid hsl(231, 11%, 63%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+#store-price,
+#custom-price,
+#service-price {
+  color: hsl(243, 100%, 62%);
+}
+
+.info :first-child {
+  color: hsl(213, 96%, 18%);
+}
+
+.info :last-child {
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.arc-price,
+.adv-price,
+.pro-price {
+  color: hsl(231, 11%, 63%);
+}
+
+#freeAd1,
+#freeAd2,
+#freeAd3 {
+  color: hsl(213, 96%, 18%);
+  opacity: 1;
+  display: none;
+}
+
+.check-info-box {
+  width: 80%;
+  max-width: 22rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.check-box {
+  width: 7%;
+  aspect-ratio: 1/1;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 5px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+}
+
+.check-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.aline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#finisingPage {
+  display: none;
+}
+
+.bill {
+  background-color: hsla(243, 97%, 73%, 0.062);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  width: 85%;
+}
+
+.planName {
+  display: flex;
+}
+
+.selected-plan {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  margin-bottom: 1rem;
+}
+
+.add-on1,
+.add-on2,
+.add-on3 {
+  display: none;
+}
+
+.add-on1 {
+  margin-bottom: 1.2rem;
+}
+
+.add-on2 {
+  margin-bottom: 0.5rem;
+}
+
+.add-on3 {
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.total-price {
+  padding: 1rem 1.2rem;
+  width: 85%;
+  margin-top: 0.5rem;
+}
+
+#totalCost {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.4rem;
+}
+
+:where(.total-price, .add-on1, .add-on2, .add-on3) :first-child {
+  color: hsl(231, 11%, 63%);
+}
+
+:where(.add-on1, .add-on2, .add-on3, .selected-plan) > :last-child {
+  color: hsl(213, 96%, 18%);
+}
+
+.plan-des h3 {
+  color: hsl(213, 96%, 18%);
+}
+
+.plan-des a {
+  color: hsl(231, 11%, 63%);
+}
+
+#confirm {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.thank-alin {
+  justify-content: center;
+}
+
+.thanks-box {
+  text-align: center;
+  width: 95%;
+}
+
+.thanks-box h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: hsl(213, 96%, 18%);
+}
+
+.thanks-box p {
+  color: hsl(231, 11%, 63%);
+}
+
+@media screen and (max-width: 1024px) {
+  .log-box {
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .steps {
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    border-radius: 0%;
+    background-size: cover;
+    background-position: 0 86%;
+    flex-direction: row;
+    z-index: 0;
+  }
+
+  .steps p {
+    display: none;
+  }
+
+  .steps span {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .step-1,
+  .step-2,
+  .step-3,
+  .step-4 {
+    display: block;
+    gap: 0;
+  }
+
+  .fill-box {
+    width: 90vw;
+    height: 60vh;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+  }
+
+  .back {
+    left: 4rem;
+    bottom: 3rem;
+  }
+
+  .next {
+    right: 4rem;
+    bottom: 3rem;
+  }
+
+  .r-btn label {
+    width: 100vw;
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+
+  #freeAd1,
+  #freeAd2,
+  #freeAd3 {
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+  }
+
+  .plan-price {
+    width: 80%;
+  }
+
+  .slid-button {
+    width: 85%;
+  }
+
+  .fill input {
+    width: 100%;
+  }
+
+  .check {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .bill {
+    width: 100%;
+  }
+
+  .aline {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .next,
+  .back {
+    bottom: 20%;
+  }
+
+  .btns {
+    width: 90vw;
+    height: 5rem;
+    background-color: white;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    border-radius: 10px;
+  }
+
+  .slid-button {
+    bottom: 3.5%;
+  }
+
+  .r-btn {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .r-btn label {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 10%;
+    align-items: center;
+  }
+
+  .r-btn label p {
+    margin-left: 3.5rem;
+  }
+}

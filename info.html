@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFORMATION</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="log-box">
+      <div class="steps">
+        <a href="info.html" class="link">
+          <div class="step-1">
+            <span id="first">1</span>
+            <div class="step-name">
+              <p>STEP 1</p>
+              <p>YOUR INFO</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="plan.html" class="link">
+          <div class="step-2">
+            <span id="second">2</span>
+            <div class="step-name">
+              <p>STEP 2</p>
+              <p>SELECT PLAN</p>
+            </div>
+          </div>
+        </a>
+
+        <div class="step-3">
+          <span>3</span>
+          <div class="step-name">
+            <p>STEP 3</p>
+            <p>ADD-ONS</p>
+          </div>
+        </div>
+
+        <div class="step-4">
+          <span>4</span>
+          <div class="step-name">
+            <p>STEP 4</p>
+            <p>SUMMARY</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fill-box">
+        <div class="top">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+        </div>
+
+        <div class="fill">
+          <div class="one">
+            <div class="masg">
+              <label for="name">Name</label>
+              <p id="msg1">This field is required</p>
+            </div>
+            <input
+              type="text number"
+              id="name"
+              placeholder="e.g. Stephen King"
+            />
+          </div>
+          <div class="two">
+            <div class="masg">
+              <label for="email">Email Address</label>
+              <p id="msg2">This field is required</p>
+            </div>
+
+            <input
+              type="text number"
+              id="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+          </div>
+          <div class="three">
+            <div class="masg">
+              <label for="phone">Phone Number</label>
+              <p id="msg3">This field is required</p>
+            </div>
+
+            <input
+              type="text number"
+              id="phone"
+              placeholder="e.g. +1 234 567 890"
+            />
+          </div>
+        </div>
+
+        <div class="btns">
+          <button class="next" id="nextbtn">Next Step</button>
+        </div>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
